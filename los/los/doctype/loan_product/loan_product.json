@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:product_code",
+ "creation": "2026-03-23 15:29:28.023590",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "product_name",
+  "category",
+  "description",
+  "column_break_xzan",
+  "product_code",
+  "status",
+  "interest_and_charges_section",
+  "interest_rate",
+  "processing_fee",
+  "column_break_argk",
+  "interest_type",
+  "prepayment_penalty",
+  "loan_amount_limits_section",
+  "minimum_loan_amount",
+  "column_break_bolx",
+  "maximum_loan_amount",
+  "tenure_limits_section",
+  "minimum_tenure_months",
+  "column_break_cggv",
+  "maximum_tenure_months",
+  "eligibility_criteria_section",
+  "minimum_age",
+  "minimum_monthly_income",
+  "eligibility_notes",
+  "column_break_urdk",
+  "maximum_age",
+  "minimum_cibil_score",
+  "security_and_collateral_section",
+  "collateral_required",
+  "column_break_boho",
+  "collateral_coverage"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "bold": 1,
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Loan Product Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_xzan",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Example: PL-SAL-001",
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nDiscontinued",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interest_and_charges_section",
+   "fieldtype": "Section Break",
+   "label": "Interest and Charges"
+  },
+  {
+   "description": "Annual interest rate",
+   "fieldname": "interest_rate",
+   "fieldtype": "Percent",
+   "label": "Interest Rate ",
+   "reqd": 1
+  },
+  {
+   "description": "One time fee on loan amount",
+   "fieldname": "processing_fee",
+   "fieldtype": "Percent",
+   "label": "Processing Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_argk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Reducing Balance",
+   "fieldname": "interest_type",
+   "fieldtype": "Select",
+   "label": " Interest Type",
+   "options": "Reducing Balance\nFlat Rate",
+   "reqd": 1
+  },
+  {
+   "description": "Charged if loan closed early",
+   "fieldname": "prepayment_penalty",
+   "fieldtype": "Percent",
+   "label": " Prepayment Penalty "
+  },
+  {
+   "fieldname": "loan_amount_limits_section",
+   "fieldtype": "Section Break",
+   "label": " Loan Amount Limits"
+  },
+  {
+   "fieldname": "minimum_loan_amount",
+   "fieldtype": "Currency",
+   "label": " Minimum Loan Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bolx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_loan_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Loan Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenure_limits_section",
+   "fieldtype": "Section Break",
+   "label": " Tenure Limits"
+  },
+  {
+   "fieldname": "minimum_tenure_months",
+   "fieldtype": "Int",
+   "label": "Minimum Tenure (months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cggv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_tenure_months",
+   "fieldtype": "Int",
+   "label": "Maximum Tenure (months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eligibility_criteria_section",
+   "fieldtype": "Section Break",
+   "label": "Eligibility Criteria"
+  },
+  {
+   "default": "21",
+   "fieldname": "minimum_age",
+   "fieldtype": "Int",
+   "label": "Minimum Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minimum_monthly_income",
+   "fieldtype": "Currency",
+   "label": " Minimum Monthly Income",
+   "reqd": 1
+  },
+  {
+   "fieldname": "eligibility_notes",
+   "fieldtype": "Text Editor",
+   "label": "Eligibility Notes"
+  },
+  {
+   "fieldname": "column_break_urdk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "60",
+   "fieldname": "maximum_age",
+   "fieldtype": "Int",
+   "label": " Maximum Age",
+   "reqd": 1
+  },
+  {
+   "default": "650",
+   "description": "Score between 300 and 900",
+   "fieldname": "minimum_cibil_score",
+   "fieldtype": "Int",
+   "label": "Minimum CIBIL Score",
+   "reqd": 1
+  },
+  {
+   "fieldname": "security_and_collateral_section",
+   "fieldtype": "Section Break",
+   "label": "Security and Collateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "collateral_required",
+   "fieldtype": "Check",
+   "label": "Collateral Required"
+  },
+  {
+   "fieldname": "column_break_boho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Security value must be this % of loan amount",
+   "fieldname": "collateral_coverage",
+   "fieldtype": "Percent",
+   "label": "Collateral Coverage"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 21:37:04.623366",
+ "modified_by": "Administrator",
+ "module": "los",
+ "name": "Loan Product",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "product_name",
+ "track_changes": 1
+}

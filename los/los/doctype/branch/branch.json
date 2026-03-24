@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:branch_code",
+ "creation": "2026-03-23 22:17:01.030647",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "branch_information_section",
+  "branch_name",
+  "bank",
+  "is_active",
+  "column_break_naer",
+  "branch_code",
+  "ifsc_code",
+  "location_details_section",
+  "address",
+  "state",
+  "column_break_wbbc",
+  "city",
+  "pincode",
+  "manager_details_section",
+  "branch_manager_name",
+  "column_break_asim",
+  "manager_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch_information_section",
+   "fieldtype": "Section Break",
+   "label": "Branch Information"
+  },
+  {
+   "bold": 1,
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_naer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Example: IB-CHN-001",
+   "fieldname": "branch_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Branch Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bank",
+   "options": "Bank",
+   "reqd": 1
+  },
+  {
+   "description": "11 character IFSC code",
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "location_details_section",
+   "fieldtype": "Section Break",
+   "label": " Location Details"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wbbc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "reqd": 1
+  },
+  {
+   "description": "6 digit pincode",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manager_details_section",
+   "fieldtype": "Section Break",
+   "label": "Manager Details"
+  },
+  {
+   "fieldname": "branch_manager_name",
+   "fieldtype": "Data",
+   "label": "Branch Manager Name"
+  },
+  {
+   "fieldname": "column_break_asim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Used for CC in notifications",
+   "fieldname": "manager_email",
+   "fieldtype": "Data",
+   "label": "Manager Email",
+   "options": "Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 21:29:30.908348",
+ "modified_by": "Administrator",
+ "module": "los",
+ "name": "Branch",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "branch_name"
+}

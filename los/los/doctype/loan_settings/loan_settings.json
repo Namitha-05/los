@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-23 22:28:48.509274",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "interest_configuration_section",
+  "default_interest_rate",
+  "column_break_ohtt",
+  "default_interest_type",
+  "penalty_configuration_section",
+  "late_payment_penalty",
+  "maximum_penalty_cap",
+  "column_break_uzzy",
+  "grace_period_days",
+  "penalty_calculation",
+  "emi_reminders_section",
+  "emi_remainder_days",
+  "column_break_zwfo",
+  "overdue_reminder_repeat_days",
+  "tenure_limits_section",
+  "maximum_loan_tenure_months",
+  "column_break_kijs",
+  "minimum_loan_tenure_months",
+  "notification_settings_section",
+  "enable_email_notifications",
+  "cc_email",
+  "column_break_aoel",
+  "sender_email_address",
+  "document_settings_section",
+  "application_prefix",
+  "column_break_sbvo",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "interest_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Interest Configuration"
+  },
+  {
+   "default": "10",
+   "description": "Used when loan product has no rate",
+   "fieldname": "default_interest_rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Default Interest Rate ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ohtt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Reducing Balance",
+   "fieldname": "default_interest_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Default Interest Type",
+   "options": "Reducing Balance\nFlat Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "penalty_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "Penalty Configuration"
+  },
+  {
+   "default": "2",
+   "description": "Applied on overdue EMI amount",
+   "fieldname": "late_payment_penalty",
+   "fieldtype": "Percent",
+   "label": "Late Payment Penalty"
+  },
+  {
+   "fieldname": "column_break_uzzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5",
+   "description": "Days allowed before penalty starts",
+   "fieldname": "grace_period_days",
+   "fieldtype": "Int",
+   "label": "Grace Period (Days)"
+  },
+  {
+   "default": "10",
+   "description": "Penalty cannot exceed this % of EMI",
+   "fieldname": "maximum_penalty_cap",
+   "fieldtype": "Percent",
+   "label": "Maximum Penalty Cap ",
+   "reqd": 1
+  },
+  {
+   "default": "Per Month",
+   "fieldname": "penalty_calculation",
+   "fieldtype": "Select",
+   "label": "Penalty Calculation",
+   "options": "Per Month\nPer Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "emi_reminders_section",
+   "fieldtype": "Section Break",
+   "label": "EMI Reminders"
+  },
+  {
+   "default": "3",
+   "description": "Send reminder this many days before EMI",
+   "fieldname": "emi_remainder_days",
+   "fieldtype": "Int",
+   "label": "EMI Remainder days",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zwfo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "7",
+   "description": "Repeat overdue reminder every N days",
+   "fieldname": "overdue_reminder_repeat_days",
+   "fieldtype": "Int",
+   "label": " Overdue Reminder Repeat (Days)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenure_limits_section",
+   "fieldtype": "Section Break",
+   "label": "Tenure Limits"
+  },
+  {
+   "default": "360",
+   "description": "No loan can exceed this tenure (30 years)",
+   "fieldname": "maximum_loan_tenure_months",
+   "fieldtype": "Int",
+   "label": "Maximum Loan Tenure (Months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kijs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "3",
+   "description": "No loan can be less than this tenure",
+   "fieldname": "minimum_loan_tenure_months",
+   "fieldtype": "Int",
+   "label": "Minimum Loan Tenure (Months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notification_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "default": "1",
+   "description": "Master switch for all emails",
+   "fieldname": "enable_email_notifications",
+   "fieldtype": "Check",
+   "label": "Enable Email Notifications"
+  },
+  {
+   "fieldname": "column_break_aoel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "From address for all loan emails",
+   "fieldname": "sender_email_address",
+   "fieldtype": "Data",
+   "label": "Sender Email Address",
+   "options": "Email"
+  },
+  {
+   "description": "Always CC on every notification",
+   "fieldname": "cc_email",
+   "fieldtype": "Data",
+   "label": "CC Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "document_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Document Settings"
+  },
+  {
+   "default": " LOS-APP",
+   "description": "Prefix for loan application numbers",
+   "fieldname": "application_prefix",
+   "fieldtype": "Data",
+   "label": "Application Number Prefix",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sbvo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-23 21:14:29.743085",
+ "modified_by": "Administrator",
+ "module": "los",
+ "name": "Loan Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
