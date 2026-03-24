@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-24 12:51:18.914098",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nominee_name",
+  "relationship",
+  "contact_number",
+  "is_minor",
+  "guardian_name",
+  "guardian_contact",
+  "column_break_kvau",
+  "data_mfjg",
+  "share_percentage",
+  "address"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": " Nominee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_mfjg",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship",
+   "options": "Spouse\nChild\nParent\nSibling\nOther",
+   "reqd": 1
+  },
+  {
+   "description": "All nominees must total 100%",
+   "fieldname": "share_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Share Percentage ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_minor",
+   "fieldtype": "Check",
+   "label": "Is Minor"
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name"
+  },
+  {
+   "fieldname": "guardian_contact",
+   "fieldtype": "Data",
+   "label": "Guardian Contact"
+  },
+  {
+   "fieldname": "column_break_kvau",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-24 13:01:23.591089",
+ "modified_by": "Administrator",
+ "module": "los",
+ "name": "Nominee Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
