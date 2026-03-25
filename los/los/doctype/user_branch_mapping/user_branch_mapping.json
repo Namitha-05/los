@@ -7,7 +7,8 @@
  "field_order": [
   "user",
   "bank",
-  "branch"
+  "branch",
+  "is_active1"
  ],
  "fields": [
   {
@@ -27,12 +28,18 @@
    "fieldtype": "Link",
    "label": "Branch",
    "options": "Branch"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active1",
+   "fieldtype": "Check",
+   "label": "Is Active1"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-24 18:09:19.313490",
+ "modified": "2026-03-25 10:31:30.684052",
  "modified_by": "Administrator",
  "module": "los",
  "name": "User Branch Mapping",
@@ -49,6 +56,45 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Maker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Checker",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Sanctioner",
+   "share": 1
   }
  ],
  "row_format": "Dynamic",
