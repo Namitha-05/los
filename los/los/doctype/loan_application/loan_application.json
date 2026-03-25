@@ -38,7 +38,6 @@
   "loan_product",
   "loan_amount_requested",
   "interest_rate",
-  "processing_fee",
   "total_repayment_amount",
   "total_interest_payable",
   "sanctioned_amount",
@@ -312,19 +311,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "processing_fee",
-   "fieldtype": "Percent",
-   "label": "Processing Fee",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
    "description": "Auto calculated",
    "fetch_from": "loan_product.processing_fee",
    "fieldname": "processing_fee_amount",
    "fieldtype": "Currency",
-   "label": "Processing Fee Amount",
-   "read_only": 1
+   "label": "Processing Fee Amount"
   },
   {
    "description": "Auto calculated",
@@ -490,7 +481,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-25 09:00:31.507550",
+ "modified": "2026-03-25 14:55:23.875339",
  "modified_by": "Administrator",
  "module": "los",
  "name": "Loan Application",
