@@ -38,7 +38,6 @@
   "loan_product",
   "loan_amount_requested",
   "interest_rate",
-  "processing_fee",
   "total_repayment_amount",
   "total_interest_payable",
   "sanctioned_amount",
@@ -277,6 +276,7 @@
   },
   {
    "description": "Auto fetched from Loan Product",
+   "fetch_from": "loan_product.category",
    "fieldname": "loan_category",
    "fieldtype": "Data",
    "label": "Loan Category",
@@ -311,18 +311,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "processing_fee",
-   "fieldtype": "Percent",
-   "label": "Processing Fee",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
    "description": "Auto calculated",
+   "fetch_from": "loan_product.processing_fee",
    "fieldname": "processing_fee_amount",
    "fieldtype": "Currency",
-   "label": "Processing Fee Amount",
-   "read_only": 1
+   "label": "Processing Fee Amount"
   },
   {
    "description": "Auto calculated",
@@ -488,7 +481,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-24 15:20:14.781807",
+ "modified": "2026-03-25 14:55:23.875339",
  "modified_by": "Administrator",
  "module": "los",
  "name": "Loan Application",
@@ -504,6 +497,53 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Admin",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Maker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Checker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LOS Sanctioner",
    "share": 1,
    "submit": 1,
    "write": 1
