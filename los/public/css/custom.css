@@ -1,0 +1,13 @@
+.loan-history-table {
+    table-layout: fixed;   /* Forces equal widths */
+    width: 100%;
+}
+
+.loan-history-table th,
+.loan-history-table td {
+    min-width: 120px;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

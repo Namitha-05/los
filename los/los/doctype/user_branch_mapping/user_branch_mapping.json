@@ -8,7 +8,7 @@
   "user",
   "bank",
   "branch",
-  "is_active1"
+  "is_active"
  ],
  "fields": [
   {
@@ -31,15 +31,15 @@
   },
   {
    "default": "1",
-   "fieldname": "is_active1",
+   "fieldname": "is_active",
    "fieldtype": "Check",
-   "label": "Is Active1"
+   "label": "Is Active"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-25 10:31:30.684052",
+ "modified": "2026-03-27 11:44:59.891533",
  "modified_by": "Administrator",
  "module": "los",
  "name": "User Branch Mapping",

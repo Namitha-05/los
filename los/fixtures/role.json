@@ -1,0 +1,54 @@
+[
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-03-24 16:18:23.657577",
+  "name": "LOS Admin",
+  "restrict_to_domain": null,
+  "role_name": "LOS Admin",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-03-24 16:18:36.898153",
+  "name": "LOS Maker",
+  "restrict_to_domain": null,
+  "role_name": "LOS Maker",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-03-24 16:18:57.285314",
+  "name": "LOS Checker",
+  "restrict_to_domain": null,
+  "role_name": "LOS Checker",
+  "two_factor_auth": 0
+ },
+ {
+  "desk_access": 1,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Role",
+  "home_page": null,
+  "is_custom": 0,
+  "modified": "2026-03-24 16:19:14.241059",
+  "name": "LOS Sanctioner",
+  "restrict_to_domain": null,
+  "role_name": "LOS Sanctioner",
+  "two_factor_auth": 0
+ }
+]

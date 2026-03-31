@@ -6,13 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_igrx",
-  "amended_from",
-  "application_date",
-  "status",
-  "column_break_jqwk",
-  "branch",
-  "bank",
+  "application_details_tab",
   "applicant_details_section",
   "applicant_name",
   "age",
@@ -24,16 +18,15 @@
   "aadhar_number",
   "email",
   "address",
-  "employment_and_financial_details_section",
-  "employment_type",
-  "monthly_income",
-  "total_monthly_income",
-  "net_eligible_income",
-  "column_break_bmyt",
-  "employer_name",
-  "other_monthly_income",
-  "existing_loan_emis",
-  "cibil_score",
+  "applicant_details_tab",
+  "section_break_igrx",
+  "amended_from",
+  "application_date",
+  "status",
+  "column_break_jqwk",
+  "branch",
+  "bank",
+  "loan_details_tab",
   "loan_details_section",
   "loan_product",
   "loan_amount_requested",
@@ -50,14 +43,30 @@
   "emi_amount",
   "purpose_of_loan",
   "disbursed_amount",
-  "joint_applicants_section",
-  "joint_applicants",
-  "nominee_details_section",
-  "nominee_details",
+  "employment_and_financial_details_tab",
+  "employment_and_financial_details_section",
+  "employment_type",
+  "monthly_income",
+  "total_monthly_income",
+  "net_eligible_income",
+  "column_break_bmyt",
+  "employer_name",
+  "other_monthly_income",
+  "existing_loan_emis",
+  "cibil_score",
+  "primary_securities_tab",
   "primary_securities_section",
   "primary_securities",
+  "tab_7_tab",
+  "joint_applicants_section",
+  "joint_applicants",
+  "nominee_details_tab",
+  "nominee_details_section",
+  "nominee_details",
+  "tab_9_tab",
   "repayment_schedule_section",
   "repayment_schedule",
+  "tab_4_tab",
   "remarks_and_audit_trail_section",
   "maker_remarks",
   "checker_remarks",
@@ -117,8 +126,10 @@
   },
   {
    "description": "Auto fetched from Branch",
+   "fetch_from": "branch.bank",
    "fieldname": "bank",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Bank",
    "options": "Bank",
    "read_only": 1
@@ -276,11 +287,9 @@
   },
   {
    "description": "Auto fetched from Loan Product",
-   "fetch_from": "loan_product.category",
    "fieldname": "loan_category",
    "fieldtype": "Data",
    "label": "Loan Category",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -312,7 +321,6 @@
   },
   {
    "description": "Auto calculated",
-   "fetch_from": "loan_product.processing_fee",
    "fieldname": "processing_fee_amount",
    "fieldtype": "Currency",
    "label": "Processing Fee Amount"
@@ -322,20 +330,17 @@
    "fieldname": "emi_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "EMI Amount",
-   "read_only": 1
+   "label": "EMI Amount"
   },
   {
    "fieldname": "total_repayment_amount",
    "fieldtype": "Currency",
-   "label": "Total Repayment Amount",
-   "read_only": 1
+   "label": "Total Repayment Amount"
   },
   {
    "fieldname": "total_interest_payable",
    "fieldtype": "Currency",
-   "label": "Total Interest Payable",
-   "read_only": 1
+   "label": "Total Interest Payable"
   },
   {
    "description": " Min 10 characters",
@@ -475,13 +480,58 @@
    "fieldtype": "Date",
    "label": "Rejected On",
    "read_only": 1
+  },
+  {
+   "fieldname": "applicant_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Applicant Information"
+  },
+  {
+   "fieldname": "employment_and_financial_details_tab",
+   "fieldtype": "Tab Break",
+   "label": " Employment and Financial Details"
+  },
+  {
+   "fieldname": "tab_4_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remarks and Audit Trail"
+  },
+  {
+   "fieldname": "loan_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Loan Details"
+  },
+  {
+   "fieldname": "primary_securities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Primary Securities"
+  },
+  {
+   "fieldname": "tab_7_tab",
+   "fieldtype": "Tab Break",
+   "label": "Joint Applicants"
+  },
+  {
+   "fieldname": "nominee_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Nominee Details"
+  },
+  {
+   "fieldname": "tab_9_tab",
+   "fieldtype": "Tab Break",
+   "label": "Repayment Schedule"
+  },
+  {
+   "fieldname": "application_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Application Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-25 14:55:23.875339",
+ "modified": "2026-03-30 15:30:15.615646",
  "modified_by": "Administrator",
  "module": "los",
  "name": "Loan Application",
@@ -489,6 +539,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -517,7 +568,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -544,6 +594,19 @@
    "read": 1,
    "report": 1,
    "role": "LOS Sanctioner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
    "share": 1,
    "submit": 1,
    "write": 1
