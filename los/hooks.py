@@ -250,3 +250,52 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+fixtures = [
+	{
+		"doctype": "Role",
+		"filters": [["role_name", "in", ["LOS Admin", "LOS Maker", "LOS Checker", "LOS Sanctioner"]]],
+	},
+	{
+		"doctype": "Custom Field",
+		"filters": [["dt", "=", "User"], ["fieldname", "in", ["los_user_type", "los_bank", "los_branch"]]],
+	},
+	{
+		"doctype": "Custom DocPerm",
+		"filters": [
+			[
+				"parent",
+				"in",
+				[
+					"Loan Application",
+					"Loan Product",
+					"Loan Product Category",
+					"Bank",
+					"Branch",
+					"Loan Settings",
+					"User Branch Mapping",
+					"Joint Applicant",
+					"Nominee Details",
+					"Primary Securities",
+					"Repayment Schedule",
+				],
+			]
+		],
+	},
+	{
+		"dt": "Print Format",
+		"filters": [["name", "in", ["LOS Loan Application Print", "LOS Sanction Letter"]]],
+	},
+	{"dt": "Report", "filters": [["name", "in", ["Loan Summary Report"]]]},
+]
+
+
+doc_events = {"User": {"on_update": "los.utils.permissions.set_user_access_permissions"}}
+
+
+permission_query_conditions = {
+	"Loan Application": "los.los.doctype.loan_application.loan_application.get_permission_query_conditions"
+}
+
+
+app_include_css = "/assets/los/css/custom.css"
